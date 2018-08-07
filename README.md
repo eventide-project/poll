@@ -1,3 +1,7 @@
+# Poll
+
+Generalized implementation of polling
+
 ## License
 
-The `cycle` library is released under the [MIT License](https://github.com/eventide-project/cycle/blob/master/MIT-License.txt).
+The `poll` library is released under the [MIT License](https://github.com/eventide-project/poll/blob/master/MIT-License.txt).
