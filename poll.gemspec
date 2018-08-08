@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'evt-poll'
-  s.version = '0.2.0.1'
-  s.summary = 'Generalized implementation of polling, with support for timeout and polling interval'
+  s.version = '0.2.0.2'
+  s.summary = 'Generalized implementation of polling with support for timeout and polling interval'
   s.description = ' '
 
   s.authors = ['The Eventide Project']
