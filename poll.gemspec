@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
 
   s.authors = ['The Eventide Project']
   s.email = 'opensource@eventide-project.org'
-  s.homepage = 'https://github.com/eventide-project/cycle'
+  s.homepage = 'https://github.com/eventide-project/poll'
   s.licenses = ['MIT']
 
   s.require_paths = ['lib']
