@@ -30,11 +30,11 @@ class Poll
     instance
   end
 
-  def self.configure(receiver, attr_name: nil, interval_milliseconds: nil, timeout_milliseconds: nil, delay_condition: nil, cycle: nil)
-    attr_name ||= :cycle
+  def self.configure(receiver, attr_name: nil, interval_milliseconds: nil, timeout_milliseconds: nil, delay_condition: nil, poll: nil)
+    attr_name ||= :poll
 
-    if !cycle.nil?
-      instance = cycle
+    if !poll.nil?
+      instance = poll
     else
       instance = build(interval_milliseconds: interval_milliseconds, timeout_milliseconds: timeout_milliseconds, delay_condition: delay_condition)
     end

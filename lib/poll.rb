@@ -3,5 +3,5 @@ require 'telemetry'
 require 'clock'
 
 require 'poll/log'
-require 'poll/cycle'
+require 'poll/poll'
 require 'poll/defaults'

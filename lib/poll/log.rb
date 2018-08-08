@@ -1,7 +1,7 @@
 class Poll
   class Log < ::Log
     def tag!(tags)
-      tags << :cycle
+      tags << :poll
       tags << :library
       tags << :verbose
     end
