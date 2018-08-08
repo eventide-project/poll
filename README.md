@@ -83,6 +83,7 @@ When a timeout is specified, polling will continue only as long as the duration 
 result = Poll.(timeout_milliseconds: 500) do
   nil # Loops for 500 milliseconds
 end
+```
 
 ## License
 
