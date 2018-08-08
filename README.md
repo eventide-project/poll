@@ -1,6 +1,6 @@
 # Poll
 
-Generalized implementation of polling, with support for timeout and polling interval.
+Generalized implementation of polling with support for timeout and polling interval.
 
 ## Example
 
