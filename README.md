@@ -6,7 +6,7 @@ Generalized implementation of polling, with support for timeout and polling inte
 
 ``` ruby
 result = Poll.(interval_milliseconds: 100, timeout_milliseconds: 500) do
-  some_query()
+  some_request()
 end
 ```
 
@@ -14,7 +14,7 @@ end
 
 - The block is executed in a loop until it returns a value
 - Polling will continue indefinitely unless a timeout is specified
-- The polling interval allows throttling of requests
+- The polling interval avoids flooding the resource with requests
 
 ## Usage
 
