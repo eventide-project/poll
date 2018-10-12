@@ -1,8 +1,7 @@
 class Poll
   Error = Class.new(RuntimeError)
 
-  Dependency.activate(self)
-
+  include Dependency
   include Log::Dependency
 
   dependency :clock, Clock::UTC
