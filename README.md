@@ -85,6 +85,34 @@ result = Poll.(timeout_milliseconds: 500) do
 end
 ```
 
+### Delay Condition
+
+The polling will continue until the _polling condition_ is met.
+
+The polling condition is based on the value of what is returned from the block that the poller is given.
+
+By default, polling stops when the block returns either `nil` or an object that responds to `empty?`
+
+```ruby
+Poll.(interval_milliseconds: 100) do
+  nil # Poll loop restarts immediately because block returns nil
+end
+```
+
+The delay condition can be assigned a lambda that will be evaluated to determine whether the block has concluded, and therefore whether the polling loop will restart.
+
+```ruby
+delay_condition = -> { |result| result.even?(result) }
+
+Poll.(interval_milliseconds: 100, delay_condition: delay_condition) do
+  2 # Result is even, therefore poll loop restarts
+end
+
+Poll.(interval_milliseconds: 100, delay_condition: delay_condition) do
+  3 # Result is odd, therefore poll loop ends
+end
+```
+
 ## License
 
 The `poll` library is released under the [MIT License](https://github.com/eventide-project/poll/blob/master/MIT-License.txt).
