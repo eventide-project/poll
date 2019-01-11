@@ -105,11 +105,11 @@ The delay condition can varied by specifying a lambda that will be evaluated to 
 delay_condition = -> { |result| result.even?(result) }
 
 Poll.(interval_milliseconds: 100, delay_condition: delay_condition) do
-  2 # Result is even, therefore poll loop restarts
+  2 # Result is even, therefore delay 100 milliseconds and re-execute the block
 end
 
 Poll.(interval_milliseconds: 100, delay_condition: delay_condition) do
-  3 # Result is odd, therefore poll loop ends
+  3 # Result is odd, therefore end the poll loop
 end
 ```
 
