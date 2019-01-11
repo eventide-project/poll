@@ -87,19 +87,19 @@ end
 
 ### Delay Condition
 
-The polling will continue until the _polling condition_ is met.
+When the _delay condition_ is met at the end of the execution of the block that the poller is given, the poller will delay for `interval_milliseconds`.
 
-The polling condition is based on the value of what is returned from the block that the poller is given.
+The delay condition is based on the value of what is returned from the block.
 
 By default, polling stops when the block returns either `nil` or an object that responds to `empty?`
 
 ```ruby
 Poll.(interval_milliseconds: 100) do
-  nil # Poll loop restarts immediately because block returns nil
+  nil # Poll loop restarts after 100 milliseconds delay because block returns nil
 end
 ```
 
-The delay condition can be assigned a lambda that will be evaluated to determine whether the block has concluded, and therefore whether the polling loop will restart.
+The delay condition can varied by specifying a lambda that will be evaluated to determine whether the block should be restarted.
 
 ```ruby
 delay_condition = -> { |result| result.even?(result) }
