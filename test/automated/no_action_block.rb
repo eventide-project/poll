@@ -5,8 +5,8 @@ context "Poll" do
     cycle = Poll.build
 
     test "Is an error" do
-      assert proc {cycle.()} do
-        raises_error? Poll::Error
+      assert_raises Poll::Error do
+        cycle.()
       end
     end
   end
