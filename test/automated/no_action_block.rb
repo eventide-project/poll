@@ -5,7 +5,7 @@ context "Poll" do
     cycle = Poll.build
 
     test "Is an error" do
-      assert_raises Poll::Error do
+      assert_raises(Poll::Error) do
         cycle.()
       end
     end
