@@ -102,7 +102,7 @@ end
 The delay condition can varied by specifying a lambda that will be evaluated to determine whether the block should be restarted.
 
 ```ruby
-delay_condition = -> { |result| result.even?(result) }
+delay_condition = -> (result) { result.even?(result) }
 
 Poll.(interval_milliseconds: 100, delay_condition: delay_condition) do
   2 # Result is even, therefore delay 100 milliseconds and re-execute the block
