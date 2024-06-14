@@ -3,7 +3,7 @@ require_relative '../../../automated_init'
 context "Poll" do
   context "Action Got No Result" do
     context "Interval" do
-      context "Cycle time is more than the interval time" do
+      context "Cycle Time Is More than the Interval Time" do
         interval_milliseconds = 0
         timeout_milliseconds = 0
         cycle = Poll.build(interval_milliseconds: interval_milliseconds, timeout_milliseconds: timeout_milliseconds)
