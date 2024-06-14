@@ -168,8 +168,6 @@ class Poll
       sink = Poll.register_telemetry_sink(instance)
       instance.telemetry_sink = sink
 
-      instance.configure
-
       instance
     end
 
